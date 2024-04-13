@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3tlafvna4dpg"]
+[gd_scene load_steps=18 format=3 uid="uid://d3tlafvna4dpg"]
 
 [ext_resource type="Script" path="res://Scripts/DevlogNormal/DevlogNormal.gd" id="1_ee4qe"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="1_k48g8"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="3_7rmty"]
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="4_aoy57"]
 [ext_resource type="Texture2D" uid="uid://basimdrksq2sa" path="res://Assets/IMG_0379.PNG" id="5_ryeng"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="6_8m6so"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="7_ou4c1"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="8_rvfkm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
 texture = ExtResource("2_rxjy4")
@@ -32,6 +35,32 @@ expand_margin_bottom = 10.0
 Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
 Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
 Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwe4j"]
+texture = ExtResource("6_8m6so")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hv1b6"]
+texture = ExtResource("7_ou4c1")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hg10f"]
+texture = ExtResource("8_rvfkm")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_wy03n"]
+Button/styles/hover = SubResource("StyleBoxTexture_hwe4j")
+Button/styles/normal = SubResource("StyleBoxTexture_hv1b6")
+Button/styles/pressed = SubResource("StyleBoxTexture_hg10f")
 
 [node name="DevlogNormal" type="MarginContainer"]
 anchors_preset = 15
@@ -74,6 +103,13 @@ offset_top = 648.0
 offset_right = 1267.0
 offset_bottom = 711.0
 theme = SubResource("Theme_wwk7c")
+
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_wy03n")
 
 [node name="Img0379" type="Sprite2D" parent="."]
 position = Vector2(823, 525)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://b6hq8840mjyn3"]
+[gd_scene load_steps=13 format=3 uid="uid://b6hq8840mjyn3"]
 
 [ext_resource type="Theme" uid="uid://csnvb1swoxtie" path="res://Assets/felicidadestheme.tres" id="1_povob"]
 [ext_resource type="Script" path="res://Scripts/Felicidades.gd" id="2_gx10e"]
 [ext_resource type="Texture2D" uid="uid://c4pv5bbacpuyo" path="res://Assets/Crunchycons/Icons/Cross_20220327174039.png" id="2_quw6l"]
 [ext_resource type="Texture2D" uid="uid://d1meduh2ke5ta" path="res://Assets/Crunchycons/Icons/CrossTransparent_20220327174035.png" id="3_wc30j"]
 [ext_resource type="Texture2D" uid="uid://b83h4b0jburvx" path="res://Assets/Crunchycons/Icons/CrossBlack_20220327174043.png" id="4_ljh24"]
+[ext_resource type="Texture2D" uid="uid://dv2gma7188u71" path="res://Assets/IMG_0383.PNG" id="6_u35ud"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5nt7"]
 texture = ExtResource("2_quw6l")
@@ -31,6 +32,12 @@ Button/styles/hover = SubResource("StyleBoxTexture_k5nt7")
 Button/styles/normal = SubResource("StyleBoxTexture_mfitl")
 Button/styles/pressed = SubResource("StyleBoxTexture_22ekr")
 
+[sub_resource type="Theme" id="Theme_pxybn"]
+Label/font_sizes/font_size = 80
+
+[sub_resource type="Theme" id="Theme_aj7kn"]
+Label/font_sizes/font_size = 140
+
 [node name="Felicidades" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -56,12 +63,57 @@ grow_horizontal = 0
 theme = SubResource("Theme_4rki6")
 
 [node name="Label" type="Label" parent="ItemList"]
-layout_mode = 2
-offset_top = 165.0
-offset_right = 1280.0
-offset_bottom = 554.0
-text = "Felicidades!
-Haz completado todos los
-módulos. Ya estás listo/a para 
-dar el taller!"
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -620.0
+offset_top = -197.0
+offset_right = 620.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_pxybn")
+text = "
+Haz completado todos los módulos."
 horizontal_alignment = 1
+
+[node name="Titulo" type="Label" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -620.0
+offset_top = -277.0
+offset_right = 620.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_aj7kn")
+text = "Felicidades!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 16.0
+offset_right = 586.0
+offset_bottom = 278.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_pxybn")
+text = "Ya estás listo/a 
+para dar el taller!"
+horizontal_alignment = 1
+
+[node name="Img0383" type="Sprite2D" parent="."]
+position = Vector2(328, 521)
+texture = ExtResource("6_u35ud")

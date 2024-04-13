@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dwf86n8fnlahm"]
+[gd_scene load_steps=21 format=3 uid="uid://dwf86n8fnlahm"]
 
 [ext_resource type="Script" path="res://Scripts/Hito2/Hito2_4.gd" id="1_bijmh"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_dlht1"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="5_8sivl"]
 [ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="6_tirig"]
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="7_ymryb"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="8_qbny0"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="9_lb424"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="10_iiofp"]
 
 [sub_resource type="Theme" id="Theme_ykj8p"]
 Label/font_sizes/font_size = 80
@@ -41,6 +44,32 @@ Button/styles/hover = SubResource("StyleBoxTexture_l3gst")
 Button/styles/normal = SubResource("StyleBoxTexture_3m8mr")
 Button/styles/pressed = SubResource("StyleBoxTexture_1rgii")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g50ey"]
+texture = ExtResource("8_qbny0")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5g0vu"]
+texture = ExtResource("9_lb424")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1fgg"]
+texture = ExtResource("10_iiofp")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_v8os0"]
+Button/styles/hover = SubResource("StyleBoxTexture_g50ey")
+Button/styles/normal = SubResource("StyleBoxTexture_5g0vu")
+Button/styles/pressed = SubResource("StyleBoxTexture_i1fgg")
+
 [node name="Hito2_4" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,10 +87,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -521.0
-offset_top = 20.0
-offset_right = 521.0
-offset_bottom = 193.0
+offset_left = -523.0
+offset_top = 85.0
+offset_right = 523.0
+offset_bottom = 258.0
 grow_horizontal = 2
 theme = SubResource("Theme_ykj8p")
 text = "¿Qué extras deben haber si o si 
@@ -71,9 +100,9 @@ horizontal_alignment = 1
 [node name="correcto" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 367.0
-offset_top = 239.0
+offset_top = 268.0
 offset_right = 427.0
-offset_bottom = 299.0
+offset_bottom = 328.0
 theme = ExtResource("4_vfp1a")
 toggle_mode = true
 
@@ -89,9 +118,9 @@ text = "Condición de victoria "
 [node name="incorrecto2" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 367.0
-offset_top = 309.0
+offset_top = 338.0
 offset_right = 427.0
-offset_bottom = 369.0
+offset_bottom = 398.0
 theme = ExtResource("4_vfp1a")
 toggle_mode = true
 
@@ -107,9 +136,9 @@ text = "Pantalla de créditos"
 [node name="incorrecto3" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 367.0
-offset_top = 449.0
+offset_top = 478.0
 offset_right = 427.0
-offset_bottom = 509.0
+offset_bottom = 538.0
 theme = ExtResource("4_vfp1a")
 toggle_mode = true
 
@@ -125,9 +154,9 @@ text = "Sonidos de habiente"
 [node name="correcto3" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 367.0
-offset_top = 589.0
+offset_top = 618.0
 offset_right = 427.0
-offset_bottom = 649.0
+offset_bottom = 678.0
 theme = ExtResource("4_vfp1a")
 toggle_mode = true
 
@@ -144,9 +173,9 @@ text = "Menú funcional en su mayoría
 [node name="incorrecto" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 367.0
-offset_top = 379.0
+offset_top = 408.0
 offset_right = 427.0
-offset_bottom = 439.0
+offset_bottom = 468.0
 theme = ExtResource("4_vfp1a")
 toggle_mode = true
 
@@ -163,9 +192,9 @@ text = "Menú completamente funcional
 [node name="correcto2" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 367.0
-offset_top = 519.0
+offset_top = 548.0
 offset_right = 427.0
-offset_bottom = 579.0
+offset_bottom = 608.0
 theme = ExtResource("4_vfp1a")
 toggle_mode = true
 
@@ -198,3 +227,10 @@ offset_bottom = 50.0
 grow_vertical = 0
 rotation = 3.14159
 theme = SubResource("Theme_nvvw5")
+
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_v8os0")

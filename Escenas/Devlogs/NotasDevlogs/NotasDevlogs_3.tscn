@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://u4x6nijpye57"]
+[gd_scene load_steps=21 format=3 uid="uid://u4x6nijpye57"]
 
 [ext_resource type="Script" path="res://Scripts/NotasDevlogs/NotasDevlogs_3.gd" id="1_ybolo"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_5t5ap"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="5_a2vac"]
 [ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="6_vjqem"]
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="7_nbabf"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="8_baib3"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="9_du78v"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="10_he85c"]
 
 [sub_resource type="Theme" id="Theme_ykj8p"]
 Label/font_sizes/font_size = 80
@@ -41,6 +44,32 @@ Button/styles/hover = SubResource("StyleBoxTexture_l3gst")
 Button/styles/normal = SubResource("StyleBoxTexture_3m8mr")
 Button/styles/pressed = SubResource("StyleBoxTexture_1rgii")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2s4x8"]
+texture = ExtResource("8_baib3")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s033s"]
+texture = ExtResource("9_du78v")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rxloa"]
+texture = ExtResource("10_he85c")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_h4f00"]
+Button/styles/hover = SubResource("StyleBoxTexture_2s4x8")
+Button/styles/normal = SubResource("StyleBoxTexture_s033s")
+Button/styles/pressed = SubResource("StyleBoxTexture_rxloa")
+
 [node name="NotasDevlog_3" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,9 +88,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -521.0
-offset_top = 20.0
+offset_top = 65.0
 offset_right = 521.0
-offset_bottom = 193.0
+offset_bottom = 238.0
 grow_horizontal = 2
 theme = SubResource("Theme_ykj8p")
 text = "¿Qué es lo que debería buscar
@@ -71,9 +100,9 @@ horizontal_alignment = 1
 [node name="correcto" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 264.0
-offset_top = 239.0
+offset_top = 256.0
 offset_right = 324.0
-offset_bottom = 299.0
+offset_bottom = 316.0
 theme = ExtResource("4_nf6dp")
 toggle_mode = true
 
@@ -90,9 +119,9 @@ text = "Que el lector interactúe con el post
 [node name="correcto2" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 264.0
-offset_top = 309.0
+offset_top = 326.0
 offset_right = 324.0
-offset_bottom = 369.0
+offset_bottom = 386.0
 theme = ExtResource("4_nf6dp")
 toggle_mode = true
 
@@ -108,9 +137,9 @@ text = "Que el lector se interese por el juego"
 [node name="correcto3" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 264.0
-offset_top = 449.0
+offset_top = 466.0
 offset_right = 324.0
-offset_bottom = 509.0
+offset_bottom = 526.0
 theme = ExtResource("4_nf6dp")
 toggle_mode = true
 
@@ -126,9 +155,9 @@ text = "Que el lector quiera jugar su juego"
 [node name="incorrecto3" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 264.0
-offset_top = 589.0
+offset_top = 606.0
 offset_right = 324.0
-offset_bottom = 649.0
+offset_bottom = 666.0
 theme = ExtResource("4_nf6dp")
 toggle_mode = true
 
@@ -144,9 +173,9 @@ text = "Que el lector quede con dudas del proceso"
 [node name="incorrecto" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 264.0
-offset_top = 379.0
+offset_top = 396.0
 offset_right = 324.0
-offset_bottom = 439.0
+offset_bottom = 456.0
 theme = ExtResource("4_nf6dp")
 toggle_mode = true
 
@@ -163,9 +192,9 @@ text = "Que el lector no vuelva a su página"
 [node name="incorrecto2" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 264.0
-offset_top = 519.0
+offset_top = 536.0
 offset_right = 324.0
-offset_bottom = 579.0
+offset_bottom = 596.0
 theme = ExtResource("4_nf6dp")
 toggle_mode = true
 
@@ -198,3 +227,10 @@ offset_bottom = 50.0
 grow_vertical = 0
 rotation = 3.14159
 theme = SubResource("Theme_nvvw5")
+
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_h4f00")

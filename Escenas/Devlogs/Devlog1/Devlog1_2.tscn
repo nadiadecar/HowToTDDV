@@ -1,12 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://fl2w2n4um5wg"]
+[gd_scene load_steps=12 format=3 uid="uid://fl2w2n4um5wg"]
 
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="1_1n0ok"]
 [ext_resource type="Script" path="res://Scripts/Devlog1/Devlog1_2.gd" id="1_jto0d"]
 [ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="2_5fh5w"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="4_epj5i"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="5_1hag8"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="6_p53we"]
 
 [sub_resource type="Theme" id="Theme_ykj8p"]
 Label/font_sizes/font_size = 80
 Label/fonts/font = ExtResource("2_5fh5w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8aoh3"]
+texture = ExtResource("4_epj5i")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tafv3"]
+texture = ExtResource("5_1hag8")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2jm5r"]
+texture = ExtResource("6_p53we")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_jlim4"]
+Button/styles/hover = SubResource("StyleBoxTexture_8aoh3")
+Button/styles/normal = SubResource("StyleBoxTexture_tafv3")
+Button/styles/pressed = SubResource("StyleBoxTexture_2jm5r")
 
 [node name="Devlog1_2" type="MarginContainer"]
 anchors_preset = 15
@@ -25,10 +54,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -391.5
-offset_top = 59.0
-offset_right = 391.5
-offset_bottom = 154.0
+offset_left = -623.5
+offset_top = 103.0
+offset_right = 623.5
+offset_bottom = 198.0
 grow_horizontal = 2
 theme = SubResource("Theme_ykj8p")
 text = "¿Dónde hay que publicar los devlogs?"
@@ -41,9 +70,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -360.0
-offset_top = -151.0
+offset_top = -128.0
 offset_right = 360.0
-offset_bottom = -57.0
+offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Novedades de U-cursos"
@@ -56,9 +85,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -360.0
-offset_top = -51.0
+offset_top = -28.0
 offset_right = 360.0
-offset_bottom = 43.0
+offset_bottom = 66.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Por telegram"
@@ -71,9 +100,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -360.0
-offset_top = 49.0
+offset_top = 72.0
 offset_right = 360.0
-offset_bottom = 143.0
+offset_bottom = 166.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "itch.io"
@@ -86,9 +115,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -360.0
-offset_top = 149.0
+offset_top = 172.0
 offset_right = 360.0
-offset_bottom = 243.0
+offset_bottom = 266.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Por el foro de U-cursos"
+
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_jlim4")

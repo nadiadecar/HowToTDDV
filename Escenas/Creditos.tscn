@@ -1,9 +1,187 @@
-[gd_scene format=3 uid="uid://doh1opjsiq1ys"]
+[gd_scene load_steps=17 format=3 uid="uid://doh1opjsiq1ys"]
 
-[node name="Creditos" type="Control"]
-layout_mode = 3
+[ext_resource type="Theme" uid="uid://bqehwwm3pykby" path="res://Assets/menutheme.tres" id="1_g5xxq"]
+[ext_resource type="Script" path="res://Scripts/Creditos.gd" id="2_ghskd"]
+[ext_resource type="Texture2D" uid="uid://b80emlyidgw5c" path="res://Assets/Black.png" id="2_vug3o"]
+[ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="3_8lpc6"]
+[ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="4_8wv10"]
+[ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="5_5p8en"]
+[ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="6_ofvaa"]
+
+[sub_resource type="Theme" id="Theme_8at7e"]
+Label/font_sizes/font_size = 60
+
+[sub_resource type="Theme" id="Theme_p024l"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvtlh"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_hbwaa"]
+Label/font_sizes/font_size = 60
+Label/styles/normal = SubResource("StyleBoxFlat_dvtlh")
+
+[sub_resource type="Theme" id="Theme_2xn7k"]
+LinkButton/colors/font_color = Color(0, 0, 0, 1)
+LinkButton/colors/font_hover_color = Color(1, 1, 1, 1)
+LinkButton/font_sizes/font_size = 60
+LinkButton/fonts/font = ExtResource("3_8lpc6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3gst"]
+texture = ExtResource("4_8wv10")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3m8mr"]
+texture = ExtResource("5_5p8en")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rgii"]
+texture = ExtResource("6_ofvaa")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_81rah"]
+Button/styles/hover = SubResource("StyleBoxTexture_l3gst")
+Button/styles/normal = SubResource("StyleBoxTexture_3m8mr")
+Button/styles/pressed = SubResource("StyleBoxTexture_1rgii")
+
+[node name="Creditos" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_g5xxq")
+script = ExtResource("2_ghskd")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+
+[node name="Black" type="Sprite2D" parent="ItemList"]
+position = Vector2(639, 218)
+texture = ExtResource("2_vug3o")
+
+[node name="Programacion" type="Label" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.0
+offset_top = 56.0
+offset_right = 264.0
+offset_bottom = 151.0
+grow_horizontal = 2
+text = "Programación"
+
+[node name="Label" type="Label" parent="ItemList/Programacion"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 114.0
+offset_right = 499.0
+offset_bottom = 209.0
+theme = SubResource("Theme_8at7e")
+text = "Nadia Decar"
+horizontal_alignment = 1
+
+[node name="Ilustraciones" type="Label" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.0
+offset_top = 271.0
+offset_right = 264.0
+offset_bottom = 366.0
+grow_horizontal = 2
+text = "Ilustraciones"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="ItemList/Ilustraciones"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 114.0
+offset_right = 499.0
+offset_bottom = 209.0
+theme = SubResource("Theme_p024l")
+text = "Melanie Gómez"
+horizontal_alignment = 1
+
+[node name="Font" type="Label" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -580.0
+offset_top = 500.0
+offset_right = -52.0
+offset_bottom = 570.0
+grow_horizontal = 2
+theme = SubResource("Theme_hbwaa")
+text = "Fonts"
+horizontal_alignment = 1
+
+[node name="LinkButton" type="LinkButton" parent="ItemList/Font"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 2.289
+offset_left = 133.0
+offset_top = 80.0
+offset_right = -132.0
+offset_bottom = -16.23
+theme = SubResource("Theme_2xn7k")
+text = "GGBotNet"
+underline = 1
+uri = "https://ggbot.itch.io"
+
+[node name="Iconos" type="Label" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 52.0
+offset_top = 500.0
+offset_right = 580.0
+offset_bottom = 570.0
+grow_horizontal = 2
+theme = SubResource("Theme_hbwaa")
+text = "Fonts"
+horizontal_alignment = 1
+
+[node name="LinkButton" type="LinkButton" parent="ItemList/Iconos"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 2.289
+offset_left = 144.0
+offset_top = 80.0
+offset_right = -121.0
+offset_bottom = -16.23
+theme = SubResource("Theme_2xn7k")
+text = "SPOICAT"
+underline = 1
+uri = "https://spoicat.itch.io"
+
+[node name="Volver" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 113.0
+offset_top = -13.0
+offset_right = 212.0
+offset_bottom = 50.0
+grow_vertical = 0
+rotation = 3.14159
+theme = SubResource("Theme_81rah")

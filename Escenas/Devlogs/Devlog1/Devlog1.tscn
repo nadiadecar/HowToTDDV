@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dv4jvbxnksh67"]
+[gd_scene load_steps=19 format=3 uid="uid://dv4jvbxnksh67"]
 
 [ext_resource type="Script" path="res://Scripts/Devlog1/Devlog1.gd" id="1_ccoy4"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="1_fse8g"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="4_p886x"]
 [ext_resource type="Texture2D" uid="uid://dfsscvvi3v33y" path="res://Assets/CrearProyecto.png" id="5_6lhch"]
 [ext_resource type="Texture2D" uid="uid://8i6i6dgs5j76" path="res://Assets/Devlogs.png" id="6_0im4i"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="6_63tbd"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="7_ny3i5"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="8_jh4v8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
 texture = ExtResource("2_fuid3")
@@ -33,6 +36,32 @@ expand_margin_bottom = 10.0
 Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
 Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
 Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fvm1s"]
+texture = ExtResource("6_63tbd")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sib2d"]
+texture = ExtResource("7_ny3i5")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bd2ku"]
+texture = ExtResource("8_jh4v8")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_cvmwq"]
+Button/styles/hover = SubResource("StyleBoxTexture_fvm1s")
+Button/styles/normal = SubResource("StyleBoxTexture_sib2d")
+Button/styles/pressed = SubResource("StyleBoxTexture_bd2ku")
 
 [node name="Devlog1" type="MarginContainer"]
 anchors_preset = 15
@@ -88,6 +117,13 @@ offset_top = 648.0
 offset_right = 1267.0
 offset_bottom = 711.0
 theme = SubResource("Theme_n6ajg")
+
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_cvmwq")
 
 [node name="CrearProyecto" type="Sprite2D" parent="."]
 position = Vector2(189, 510)

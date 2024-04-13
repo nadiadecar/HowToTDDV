@@ -1,12 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://choblsguyfkf"]
+[gd_scene load_steps=12 format=3 uid="uid://choblsguyfkf"]
 
 [ext_resource type="Script" path="res://Scripts/DevlogHitos/DevlogHitos_1.gd" id="1_a8t2h"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_66mbb"]
 [ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="3_oquu7"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="4_8dvhe"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="5_qswkf"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="6_7mffc"]
 
 [sub_resource type="Theme" id="Theme_ykj8p"]
 Label/font_sizes/font_size = 90
 Label/fonts/font = ExtResource("3_oquu7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q1d5u"]
+texture = ExtResource("4_8dvhe")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7v6df"]
+texture = ExtResource("5_qswkf")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qkscu"]
+texture = ExtResource("6_7mffc")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_a3vbw"]
+Button/styles/hover = SubResource("StyleBoxTexture_q1d5u")
+Button/styles/normal = SubResource("StyleBoxTexture_7v6df")
+Button/styles/pressed = SubResource("StyleBoxTexture_qkscu")
 
 [node name="DevlogHitos_1" type="MarginContainer"]
 anchors_preset = 15
@@ -94,3 +123,10 @@ offset_bottom = 212.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Una build con .pck"
+
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_a3vbw")

@@ -1,11 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dkd3olwhptcyf"]
+[gd_scene load_steps=18 format=3 uid="uid://jrxcdimjk431"]
 
-[ext_resource type="Script" path="res://Scripts/Hito1/Hito1_4.gd" id="1_bibyh"]
+[ext_resource type="Script" path="res://Scripts/Hito1/Hito1_4.gd" id="1_oam57"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_hkd14"]
 [ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="3_jr188"]
 [ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="4_khaxq"]
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="5_6l2w3"]
 [ext_resource type="Texture2D" uid="uid://bmtp3jtvuh5r2" path="res://Assets/IMG_0380.PNG" id="6_hlyx0"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="6_ycmwx"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="7_3slx4"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="8_cd8sn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
 texture = ExtResource("3_jr188")
@@ -33,13 +36,39 @@ Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
 Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
 Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
 
-[node name="Hito1_2" type="MarginContainer"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iegdn"]
+texture = ExtResource("6_ycmwx")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_le2jx"]
+texture = ExtResource("7_3slx4")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6hp1f"]
+texture = ExtResource("8_cd8sn")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_ty4d0"]
+Button/styles/hover = SubResource("StyleBoxTexture_iegdn")
+Button/styles/normal = SubResource("StyleBoxTexture_le2jx")
+Button/styles/pressed = SubResource("StyleBoxTexture_6hp1f")
+
+[node name="Hito1_4" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bibyh")
+script = ExtResource("1_oam57")
 
 [node name="ItemList" type="ItemList" parent="."]
 layout_mode = 2
@@ -51,9 +80,7 @@ offset_left = 73.0
 offset_top = 157.0
 offset_right = 1240.0
 offset_bottom = 396.0
-text = "Su Hito 1 debe tener una demo. No se espera que esté el 100% funcional con todos los sprites listos, ni nada por el estilo. Con una caja que se mueva y tenga una base de la mecánica nos basta. Claro que si tienen más, mejor.
-
-Les recomendamos que no se gasten el tiempo en buscar assets para esta demo, nos interesa más ver el desarrollo. "
+text = "Para este hito se espera que usted nos explique en detalle el condepto de su juego, desarrollando la idea y siendo explícitos en la mecánica innovadora y el tipo de juego que es. Como aspecto secundario puede hablar de la historia que tengan en mente, la paleta de colores, la inspiración del juego, etc. Lo que considere necesario para que entendamos el concepto de su juego. "
 
 [node name="Label" type="Label" parent="ItemList"]
 layout_mode = 0
@@ -71,6 +98,13 @@ offset_right = 1267.0
 offset_bottom = 711.0
 theme = SubResource("Theme_n6ajg")
 
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_ty4d0")
+
 [node name="Img0380" type="Sprite2D" parent="."]
-position = Vector2(786, 524)
+position = Vector2(716, 524)
 texture = ExtResource("6_hlyx0")

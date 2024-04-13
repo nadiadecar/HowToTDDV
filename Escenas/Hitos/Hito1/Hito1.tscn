@@ -1,12 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://d2ucupt1dcc8n"]
+[gd_scene load_steps=20 format=3 uid="uid://d2ucupt1dcc8n"]
 
 [ext_resource type="Script" path="res://Scripts/Hito1/Hito1.gd" id="1_iupvo"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_v6q5t"]
 [ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="3_jqqaj"]
 [ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="4_aojox"]
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="5_7ml1l"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="6_uol4p"]
 [ext_resource type="Texture2D" uid="uid://bmtp3jtvuh5r2" path="res://Assets/IMG_0380.PNG" id="6_xgy7g"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="7_pueuv"]
 [ext_resource type="Texture2D" uid="uid://385scm2mv3yo" path="res://Assets/EjemploBuild.png" id="7_rvmn3"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="8_6prqf"]
 
 [sub_resource type="Theme" id="Theme_aojek"]
 Label/font_sizes/font_size = 30
@@ -37,6 +40,32 @@ Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
 Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
 Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_af01n"]
+texture = ExtResource("6_uol4p")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cis27"]
+texture = ExtResource("7_pueuv")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ourem"]
+texture = ExtResource("8_6prqf")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_ji7yi"]
+Button/styles/hover = SubResource("StyleBoxTexture_af01n")
+Button/styles/normal = SubResource("StyleBoxTexture_cis27")
+Button/styles/pressed = SubResource("StyleBoxTexture_ourem")
+
 [node name="Hito1" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,8 +83,10 @@ layout_mode = 0
 offset_left = 73.0
 offset_top = 157.0
 offset_right = 1240.0
-offset_bottom = 396.0
-text = "Como pueden ver en el calendario, hay 3 hitos a lo largo del curso. Para cada hito se les va a pedir que suban la versión a presentar en itch.io hasta el día anterior a su presentación, pues lo que se va a mostrar (en cuanto al juego) va a ser lo que haya ahí."
+offset_bottom = 444.0
+text = "Como pueden ver en el calendario, hay 3 hitos a lo largo del curso. Para cada hito se les va a pedir que suban la versión a presentar en itch.io hasta el día anterior a su presentación, pues lo que se va a mostrar (en cuanto al juego) va a ser lo que haya ahí.
+
+Las presentaciones se van a dividir en dos días, los cuales serán asignados en un post del foro de U-cursos y por orden de llegada, con la excepción de casos especiales. La asistencia es obligatoria para todos los que presentan un día, y el día que no presentan debe ir mínimo uno del grupo. "
 
 [node name="LinkButton" type="LinkButton" parent="ItemList/RichTextLabel"]
 layout_mode = 1
@@ -65,9 +96,9 @@ anchor_top = 0.272
 anchor_right = 0.579
 anchor_bottom = 0.41
 offset_left = -65.669
-offset_top = -33.008
+offset_top = -45.008
 offset_right = -39.925
-offset_bottom = -32.99
+offset_bottom = -44.99
 theme = ExtResource("2_v6q5t")
 text = "itch.io"
 underline = 1
@@ -83,12 +114,13 @@ text = "Contexto
 "
 
 [node name="Label" type="Label" parent="ItemList/Label"]
+layout_mode = 0
 offset_left = 645.0
-offset_top = 341.0
+offset_top = 427.0
 offset_right = 1381.0
-offset_bottom = 436.0
+offset_bottom = 522.0
 theme = SubResource("Theme_aojek")
-text = "Ejemplo:"
+text = "Ejemplo build subida:"
 
 [node name="Siguiente" type="Button" parent="ItemList"]
 layout_mode = 0
@@ -98,11 +130,19 @@ offset_right = 1267.0
 offset_bottom = 711.0
 theme = SubResource("Theme_n6ajg")
 
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_ji7yi")
+
 [node name="Img0380" type="Sprite2D" parent="."]
-position = Vector2(356, 526)
+position = Vector2(390, 554)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("6_xgy7g")
 
 [node name="EjemploBuild" type="Sprite2D" parent="."]
-position = Vector2(969, 483)
+position = Vector2(969, 569)
 scale = Vector2(0.854167, 0.854167)
 texture = ExtResource("7_rvmn3")

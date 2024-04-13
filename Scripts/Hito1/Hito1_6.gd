@@ -1,14 +1,14 @@
 extends MarginContainer
 
-
+@onready var siguiente = $ItemList/Siguiente
 @onready var niveles = $ItemList/Niveles
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	siguiente.pressed.connect(_on_siguiente_pressed)
 	niveles.pressed.connect(_on_niveles_pressed)
 
+func _on_siguiente_pressed(): 
+	get_tree().change_scene_to_file("res://Escenas/Hitos/Hito1/Hito1_7.tscn")
 
-func _on_niveles_pressed():
-	#Aquí hay que marcar que se completó el nivel
-	Game.save_level("Hito1")
+func _on_niveles_pressed(): 
 	get_tree().change_scene_to_file("res://Escenas/Niveles.tscn")

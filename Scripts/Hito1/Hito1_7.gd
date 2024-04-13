@@ -4,8 +4,8 @@ extends MarginContainer
 @onready var incorrecto_2 = $ItemList/incorrecto2
 @onready var correcto = $ItemList/correcto
 @onready var incorrecto_3 = $ItemList/incorrecto3
-
 @onready var niveles = $ItemList/Niveles
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,10 +16,10 @@ func _ready():
 	niveles.pressed.connect(_on_niveles_pressed)
 
 func _on_incorrecto_pressed():
-	get_tree().change_scene_to_file("res://Escenas/Devlogs/DevlogHitos/DevlogHitos.tscn")
+	get_tree().change_scene_to_file("res://Escenas/Hitos/Hito1/Hito1_6.tscn")
 
 func _on_correcto_pressed():
-	get_tree().change_scene_to_file("res://Escenas/Devlogs/DevlogHitos/DevlogHitos_2.tscn")
+	get_tree().change_scene_to_file("res://Escenas/Hitos/Hito1/Hito1_8.tscn")
 
 func _on_niveles_pressed(): 
 	get_tree().change_scene_to_file("res://Escenas/Niveles.tscn")

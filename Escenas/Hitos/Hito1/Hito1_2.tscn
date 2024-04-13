@@ -1,37 +1,41 @@
-[gd_scene load_steps=11 format=3 uid="uid://jrxcdimjk431"]
+[gd_scene load_steps=12 format=3 uid="uid://dhu2b40mp5m2i"]
 
 [ext_resource type="Script" path="res://Scripts/Hito1/Hito1_2.gd" id="1_46844"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_00jtg"]
-[ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="3_r131c"]
-[ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="4_5h4id"]
-[ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="5_r3m2d"]
-[ext_resource type="Texture2D" uid="uid://basimdrksq2sa" path="res://Assets/IMG_0379.PNG" id="6_1cb8f"]
+[ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="3_dk02b"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="4_dwtav"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="5_vg18x"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="6_kr57u"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
-texture = ExtResource("3_r131c")
+[sub_resource type="Theme" id="Theme_ykj8p"]
+Label/font_sizes/font_size = 80
+Label/fonts/font = ExtResource("3_dk02b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lr5wg"]
+texture = ExtResource("4_dwtav")
 texture_margin_top = 10.0
 texture_margin_bottom = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg6s1"]
-texture = ExtResource("4_5h4id")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vbpub"]
+texture = ExtResource("5_vg18x")
 texture_margin_top = 10.0
 texture_margin_bottom = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmn6q"]
-texture = ExtResource("5_r3m2d")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qfkwh"]
+texture = ExtResource("6_kr57u")
 texture_margin_top = 10.0
 texture_margin_bottom = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
-[sub_resource type="Theme" id="Theme_n6ajg"]
-Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
-Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
-Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
+[sub_resource type="Theme" id="Theme_itlid"]
+Button/styles/hover = SubResource("StyleBoxTexture_lr5wg")
+Button/styles/normal = SubResource("StyleBoxTexture_vbpub")
+Button/styles/pressed = SubResource("StyleBoxTexture_qfkwh")
 
 [node name="Hito1_2" type="MarginContainer"]
 anchors_preset = 15
@@ -45,30 +49,72 @@ script = ExtResource("1_46844")
 layout_mode = 2
 theme = ExtResource("2_00jtg")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ItemList"]
-layout_mode = 0
-offset_left = 73.0
-offset_top = 157.0
-offset_right = 1240.0
-offset_bottom = 396.0
-text = "Para este hito se espera que usted nos explique en detalle el condepto de su juego, desarrollando la idea y siendo explícitos en la mecánica innovadora y el tipo de juego que es. Como aspecto secundario puede hablar de la historia que tengan en mente, la paleta de colores, la inspiración del juego, etc. Lo que considere necesario para que entendamos el concepto de su juego. "
-
 [node name="Label" type="Label" parent="ItemList"]
-layout_mode = 0
-offset_left = 67.0
-offset_top = 36.0
-offset_right = 803.0
-offset_bottom = 131.0
-text = "Hito 1"
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -493.5
+offset_top = 31.0
+offset_right = 493.5
+offset_bottom = 204.0
+grow_horizontal = 2
+theme = SubResource("Theme_ykj8p")
+text = "¿Es obligatorio asistir a todas
+las presentaciones?"
+horizontal_alignment = 1
 
-[node name="Siguiente" type="Button" parent="ItemList"]
-layout_mode = 0
-offset_left = 1168.0
-offset_top = 648.0
-offset_right = 1267.0
-offset_bottom = 711.0
-theme = SubResource("Theme_n6ajg")
+[node name="incorrecto1" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -615.0
+offset_top = -122.0
+offset_right = 615.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Si"
 
-[node name="Img0379" type="Sprite2D" parent="."]
-position = Vector2(755, 523)
-texture = ExtResource("6_1cb8f")
+[node name="incorrecto2" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -615.0
+offset_top = -15.0
+offset_right = 615.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "No, solo hay que ir algunos el día que
+se presenta"
+
+[node name="correcto" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -615.0
+offset_top = 169.0
+offset_right = 615.0
+offset_bottom = 337.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "No, todos cuando presentamos y 1 min.
+el otro día"
+
+[node name="Niveles" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_itlid")

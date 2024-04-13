@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqomd4rnescs6"]
+[gd_scene load_steps=21 format=3 uid="uid://cqomd4rnescs6"]
 
 [ext_resource type="Script" path="res://Scripts/NotasDevlogs/NotasDevlog_1.gd" id="1_pblja"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_5yprk"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="5_6cbq4"]
 [ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="6_24dae"]
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="7_b52kl"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="8_7f3cw"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="9_voqdh"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="10_c24sa"]
 
 [sub_resource type="Theme" id="Theme_ykj8p"]
 Label/font_sizes/font_size = 80
@@ -41,6 +44,32 @@ Button/styles/hover = SubResource("StyleBoxTexture_l3gst")
 Button/styles/normal = SubResource("StyleBoxTexture_3m8mr")
 Button/styles/pressed = SubResource("StyleBoxTexture_1rgii")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y44bi"]
+texture = ExtResource("8_7f3cw")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hkhx"]
+texture = ExtResource("9_voqdh")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cjq80"]
+texture = ExtResource("10_c24sa")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_001jt"]
+Button/styles/hover = SubResource("StyleBoxTexture_y44bi")
+Button/styles/normal = SubResource("StyleBoxTexture_4hkhx")
+Button/styles/pressed = SubResource("StyleBoxTexture_cjq80")
+
 [node name="NotasDevlog_1" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,9 +88,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -521.0
-offset_top = 20.0
+offset_top = 47.0
 offset_right = 521.0
-offset_bottom = 193.0
+offset_bottom = 220.0
 grow_horizontal = 2
 theme = SubResource("Theme_ykj8p")
 text = "¿Qué notas puedes obtener en
@@ -71,9 +100,9 @@ horizontal_alignment = 1
 [node name="correcto" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 507.0
-offset_top = 239.0
+offset_top = 244.0
 offset_right = 567.0
-offset_bottom = 299.0
+offset_bottom = 304.0
 theme = ExtResource("4_sq1el")
 toggle_mode = true
 
@@ -90,9 +119,9 @@ text = "1.0
 [node name="correcto2" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 507.0
-offset_top = 309.0
+offset_top = 314.0
 offset_right = 567.0
-offset_bottom = 369.0
+offset_bottom = 374.0
 theme = ExtResource("4_sq1el")
 toggle_mode = true
 
@@ -109,9 +138,9 @@ text = "7.0
 [node name="correcto3" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 507.0
-offset_top = 449.0
+offset_top = 454.0
 offset_right = 567.0
-offset_bottom = 509.0
+offset_bottom = 514.0
 theme = ExtResource("4_sq1el")
 toggle_mode = true
 
@@ -127,9 +156,9 @@ text = "4.0"
 [node name="incorrecto3" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 507.0
-offset_top = 589.0
+offset_top = 594.0
 offset_right = 567.0
-offset_bottom = 649.0
+offset_bottom = 654.0
 theme = ExtResource("4_sq1el")
 toggle_mode = true
 
@@ -145,9 +174,9 @@ text = "3.0"
 [node name="incorrecto" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 507.0
-offset_top = 379.0
+offset_top = 384.0
 offset_right = 567.0
-offset_bottom = 439.0
+offset_bottom = 444.0
 theme = ExtResource("4_sq1el")
 toggle_mode = true
 
@@ -164,9 +193,9 @@ text = "5.0"
 [node name="incorrecto2" type="Button" parent="ItemList"]
 layout_mode = 0
 offset_left = 507.0
-offset_top = 519.0
+offset_top = 524.0
 offset_right = 567.0
-offset_bottom = 579.0
+offset_bottom = 584.0
 theme = ExtResource("4_sq1el")
 toggle_mode = true
 
@@ -199,3 +228,10 @@ offset_bottom = 50.0
 grow_vertical = 0
 rotation = 3.14159
 theme = SubResource("Theme_nvvw5")
+
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_001jt")

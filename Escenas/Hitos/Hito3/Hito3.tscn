@@ -1,11 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://gdarspj4xl5e"]
+[gd_scene load_steps=18 format=3 uid="uid://gdarspj4xl5e"]
 
 [ext_resource type="Script" path="res://Scripts/Hito3/Hito3.gd" id="1_d448l"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_telpf"]
 [ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="3_txr8l"]
 [ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="4_blany"]
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="5_ajoor"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="6_c0tfu"]
 [ext_resource type="Texture2D" uid="uid://basimdrksq2sa" path="res://Assets/IMG_0379.PNG" id="6_ykg64"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="7_xpslw"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="8_wodbu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
 texture = ExtResource("3_txr8l")
@@ -32,6 +35,32 @@ expand_margin_bottom = 10.0
 Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
 Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
 Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prejf"]
+texture = ExtResource("6_c0tfu")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dbfuy"]
+texture = ExtResource("7_xpslw")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bdcjg"]
+texture = ExtResource("8_wodbu")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_5cw6f"]
+Button/styles/hover = SubResource("StyleBoxTexture_prejf")
+Button/styles/normal = SubResource("StyleBoxTexture_dbfuy")
+Button/styles/pressed = SubResource("StyleBoxTexture_bdcjg")
 
 [node name="Hito3" type="MarginContainer"]
 anchors_preset = 15
@@ -72,6 +101,13 @@ offset_top = 648.0
 offset_right = 1267.0
 offset_bottom = 711.0
 theme = SubResource("Theme_n6ajg")
+
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_5cw6f")
 
 [node name="Img0379" type="Sprite2D" parent="."]
 position = Vector2(872, 523)

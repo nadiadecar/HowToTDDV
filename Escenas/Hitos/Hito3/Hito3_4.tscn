@@ -1,12 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1qjypcle858h"]
+[gd_scene load_steps=12 format=3 uid="uid://b1qjypcle858h"]
 
 [ext_resource type="Script" path="res://Scripts/Hito3/Hito3_4.gd" id="1_jdbhp"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_rue8o"]
 [ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="3_nueg7"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="4_juwei"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="5_mgl0m"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="6_bgqhp"]
 
 [sub_resource type="Theme" id="Theme_ykj8p"]
 Label/font_sizes/font_size = 80
 Label/fonts/font = ExtResource("3_nueg7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv7r0"]
+texture = ExtResource("4_juwei")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ymtov"]
+texture = ExtResource("5_mgl0m")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gei8"]
+texture = ExtResource("6_bgqhp")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_u84wj"]
+Button/styles/hover = SubResource("StyleBoxTexture_uv7r0")
+Button/styles/normal = SubResource("StyleBoxTexture_ymtov")
+Button/styles/pressed = SubResource("StyleBoxTexture_5gei8")
 
 [node name="Hito3_4" type="MarginContainer"]
 anchors_preset = 15
@@ -25,10 +54,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -391.5
-offset_top = 59.0
-offset_right = 391.5
-offset_bottom = 154.0
+offset_left = -553.0
+offset_top = 69.0
+offset_right = 553.0
+offset_bottom = 242.0
 grow_horizontal = 2
 theme = SubResource("Theme_ykj8p")
 text = "¿Se deben poner a ustedes en los
@@ -94,3 +123,10 @@ offset_bottom = 306.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "No, solo los externos"
+
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_u84wj")

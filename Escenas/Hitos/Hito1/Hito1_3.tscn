@@ -1,47 +1,68 @@
-[gd_scene load_steps=14 format=3 uid="uid://d17xvkyxs7gmc"]
+[gd_scene load_steps=18 format=3 uid="uid://c6kac7i6ks76o"]
 
 [ext_resource type="Script" path="res://Scripts/Hito1/Hito1_3.gd" id="1_kesx0"]
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_6qhfv"]
-[ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="3_khvs4"]
-[ext_resource type="Theme" uid="uid://cy2ecrfxy0ckm" path="res://Assets/checkTheme.tres" id="4_g77xe"]
 [ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="5_8yu8m"]
+[ext_resource type="Texture2D" uid="uid://basimdrksq2sa" path="res://Assets/IMG_0379.PNG" id="6_bpl4m"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="6_cn864"]
 [ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="6_kuehs"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="7_b5ruv"]
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="7_uuatj"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="8_lyy0b"]
 
-[sub_resource type="Theme" id="Theme_ykj8p"]
-Label/font_sizes/font_size = 80
-Label/fonts/font = ExtResource("3_khvs4")
-
-[sub_resource type="Theme" id="Theme_juuyf"]
-RichTextLabel/font_sizes/normal_font_size = 40
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3gst"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
 texture = ExtResource("5_8yu8m")
 texture_margin_top = 10.0
 texture_margin_bottom = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3m8mr"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg6s1"]
 texture = ExtResource("6_kuehs")
 texture_margin_top = 10.0
 texture_margin_bottom = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rgii"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmn6q"]
 texture = ExtResource("7_uuatj")
 texture_margin_top = 10.0
 texture_margin_bottom = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
-[sub_resource type="Theme" id="Theme_nvvw5"]
-Button/styles/hover = SubResource("StyleBoxTexture_l3gst")
-Button/styles/normal = SubResource("StyleBoxTexture_3m8mr")
-Button/styles/pressed = SubResource("StyleBoxTexture_1rgii")
+[sub_resource type="Theme" id="Theme_n6ajg"]
+Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
+Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
+Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
 
-[node name="Hito1_3" type="MarginContainer"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xwktl"]
+texture = ExtResource("6_cn864")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v6ry5"]
+texture = ExtResource("7_b5ruv")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rplbk"]
+texture = ExtResource("8_lyy0b")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_k7xco"]
+Button/styles/hover = SubResource("StyleBoxTexture_xwktl")
+Button/styles/normal = SubResource("StyleBoxTexture_v6ry5")
+Button/styles/pressed = SubResource("StyleBoxTexture_rplbk")
+
+[node name="Hito1_4" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -53,130 +74,23 @@ script = ExtResource("1_kesx0")
 layout_mode = 2
 theme = ExtResource("2_6qhfv")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 157.0
+offset_right = 1240.0
+offset_bottom = 396.0
+text = "Como se mencionó antes, la asignación de días se hace mediante U-cursos. Se hará un post y una sola persona por grupo deberá comentar que día quieren presentar y ahí mismo decir si hay algún miembro que tenga problemas para presentar en alguna fecha. 
+
+Se le dará prioridad a las personas que realmente tengan choque de horario, y los cupos que quedan, se llenan por el orden de llegada al post del foro. "
+
 [node name="Label" type="Label" parent="ItemList"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -521.0
-offset_top = 20.0
-offset_right = 521.0
-offset_bottom = 193.0
-grow_horizontal = 2
-theme = SubResource("Theme_ykj8p")
-text = "¿Qué cosas tienen que mencionar
-en el Hito 1 si o si?"
-horizontal_alignment = 1
-
-[node name="correcto" type="Button" parent="ItemList"]
 layout_mode = 0
-offset_left = 367.0
-offset_top = 239.0
-offset_right = 427.0
-offset_bottom = 299.0
-theme = ExtResource("4_g77xe")
-toggle_mode = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/correcto"]
-layout_mode = 0
-offset_left = 86.0
-offset_top = 7.0
-offset_right = 618.0
-offset_bottom = 69.0
-theme = SubResource("Theme_juuyf")
-text = "Concepto del juego"
-
-[node name="correcto2" type="Button" parent="ItemList"]
-layout_mode = 0
-offset_left = 367.0
-offset_top = 309.0
-offset_right = 427.0
-offset_bottom = 369.0
-theme = ExtResource("4_g77xe")
-toggle_mode = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/correcto2"]
-layout_mode = 0
-offset_left = 86.0
-offset_top = 7.0
-offset_right = 847.0
-offset_bottom = 69.0
-theme = SubResource("Theme_juuyf")
-text = "Mecánica innovadora"
-
-[node name="correcto3" type="Button" parent="ItemList"]
-layout_mode = 0
-offset_left = 367.0
-offset_top = 449.0
-offset_right = 427.0
-offset_bottom = 509.0
-theme = ExtResource("4_g77xe")
-toggle_mode = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/correcto3"]
-layout_mode = 0
-offset_left = 86.0
-offset_top = 7.0
-offset_right = 847.0
-offset_bottom = 69.0
-theme = SubResource("Theme_juuyf")
-text = "Tipo de juego"
-
-[node name="incorrecto3" type="Button" parent="ItemList"]
-layout_mode = 0
-offset_left = 367.0
-offset_top = 589.0
-offset_right = 427.0
-offset_bottom = 649.0
-theme = ExtResource("4_g77xe")
-toggle_mode = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/incorrecto3"]
-layout_mode = 0
-offset_left = 86.0
-offset_top = 7.0
-offset_right = 847.0
-offset_bottom = 69.0
-theme = SubResource("Theme_juuyf")
-text = "Historia del juego
-"
-
-[node name="incorrecto" type="Button" parent="ItemList"]
-layout_mode = 0
-offset_left = 367.0
-offset_top = 379.0
-offset_right = 427.0
-offset_bottom = 439.0
-theme = ExtResource("4_g77xe")
-toggle_mode = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/incorrecto"]
-layout_mode = 0
-offset_left = 86.0
-offset_top = 7.0
-offset_right = 847.0
-offset_bottom = 69.0
-theme = SubResource("Theme_juuyf")
-text = "Paleta de colores
-"
-
-[node name="incorrecto2" type="Button" parent="ItemList"]
-layout_mode = 0
-offset_left = 367.0
-offset_top = 519.0
-offset_right = 427.0
-offset_bottom = 579.0
-theme = ExtResource("4_g77xe")
-toggle_mode = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/incorrecto2"]
-layout_mode = 0
-offset_left = 86.0
-offset_top = 7.0
-offset_right = 847.0
-offset_bottom = 69.0
-theme = SubResource("Theme_juuyf")
-text = "Inspiración del juego"
+offset_left = 67.0
+offset_top = 36.0
+offset_right = 803.0
+offset_bottom = 131.0
+text = "Asignación de día"
 
 [node name="Siguiente" type="Button" parent="ItemList"]
 layout_mode = 0
@@ -184,17 +98,16 @@ offset_left = 1168.0
 offset_top = 648.0
 offset_right = 1267.0
 offset_bottom = 711.0
-theme = SubResource("Theme_nvvw5")
+theme = SubResource("Theme_n6ajg")
 
-[node name="Volver" type="Button" parent="ItemList"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 113.0
-offset_top = -13.0
-offset_right = 212.0
-offset_bottom = 50.0
-grow_vertical = 0
-rotation = 3.14159
-theme = SubResource("Theme_nvvw5")
+[node name="Niveles" type="Button" parent="ItemList"]
+offset_left = 1165.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 79.0
+theme = SubResource("Theme_k7xco")
+
+[node name="Img0379" type="Sprite2D" parent="."]
+position = Vector2(780, 545)
+scale = Vector2(0.881679, 0.881679)
+texture = ExtResource("6_bpl4m")

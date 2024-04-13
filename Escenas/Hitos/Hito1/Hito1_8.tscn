@@ -1,32 +1,32 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhcbhjm7ro2ke"]
+[gd_scene load_steps=12 format=3 uid="uid://bfdqiffjljbsc"]
 
-[ext_resource type="Script" path="res://Scripts/NotasDevlogs/NotasDevlogs_4.gd" id="1_o6g41"]
-[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_aafyt"]
-[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="3_sk8jg"]
-[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="4_4vyxx"]
-[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="5_d71pg"]
-[ext_resource type="Texture2D" uid="uid://cu0au6setg1yd" path="res://Assets/IMG_0382.PNG" id="6_5h1rr"]
+[ext_resource type="Script" path="res://Scripts/Hito1/Hito1_8.gd" id="1_bhykc"]
+[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_dkxam"]
+[ext_resource type="Texture2D" uid="uid://bq2pm2n51rfn1" path="res://Assets/Crunchycons/Icons/Menu_20220327174554.png" id="3_a8t44"]
+[ext_resource type="Texture2D" uid="uid://bptto8nrmiuhj" path="res://Assets/Crunchycons/Icons/MenuTransparent_20220327174544.png" id="4_06l1m"]
+[ext_resource type="Texture2D" uid="uid://dicvfgoimw7ge" path="res://Assets/Crunchycons/Icons/MenuBlack_20220327174548.png" id="5_htdub"]
+[ext_resource type="Texture2D" uid="uid://cu0au6setg1yd" path="res://Assets/IMG_0382.PNG" id="6_kimil"]
 
 [sub_resource type="Theme" id="Theme_g4tdy"]
 Label/font_sizes/font_size = 50
 RichTextLabel/font_sizes/normal_font_size = 30
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
-texture = ExtResource("3_sk8jg")
+texture = ExtResource("3_a8t44")
 texture_margin_top = 10.0
 texture_margin_bottom = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg6s1"]
-texture = ExtResource("4_4vyxx")
+texture = ExtResource("4_06l1m")
 texture_margin_top = 10.0
 texture_margin_bottom = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmn6q"]
-texture = ExtResource("5_d71pg")
+texture = ExtResource("5_htdub")
 texture_margin_top = 10.0
 texture_margin_bottom = 10.0
 expand_margin_top = 10.0
@@ -37,17 +37,17 @@ Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
 Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
 Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
 
-[node name="NotasDevlog_4" type="MarginContainer"]
+[node name="Hito1_6" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_o6g41")
+script = ExtResource("1_bhykc")
 
 [node name="ItemList" type="ItemList" parent="."]
 layout_mode = 2
-theme = ExtResource("2_aafyt")
+theme = ExtResource("2_dkxam")
 
 [node name="Label" type="Label" parent="ItemList"]
 layout_mode = 1
@@ -81,7 +81,7 @@ grow_vertical = 2
 scale = Vector2(1.01471, 1)
 theme = SubResource("Theme_g4tdy")
 text = "Ya estas listo/a para 
-hacer tu primer devlog!"
+presentar el Hito 1!"
 horizontal_alignment = 1
 
 [node name="Niveles" type="Button" parent="ItemList"]
@@ -95,4 +95,4 @@ theme = SubResource("Theme_n6ajg")
 [node name="Img0382" type="Sprite2D" parent="."]
 position = Vector2(259.428, 483.25)
 scale = Vector2(1.1972, 1.1972)
-texture = ExtResource("6_5h1rr")
+texture = ExtResource("6_kimil")
