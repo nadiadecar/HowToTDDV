@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6hq8840mjyn3"]
+
+[ext_resource type="Theme" uid="uid://csnvb1swoxtie" path="res://Assets/felicidadestheme.tres" id="1_povob"]
+[ext_resource type="Script" path="res://Scripts/Felicidades.gd" id="2_gx10e"]
+[ext_resource type="Texture2D" uid="uid://c4pv5bbacpuyo" path="res://Assets/Crunchycons/Icons/Cross_20220327174039.png" id="2_quw6l"]
+[ext_resource type="Texture2D" uid="uid://d1meduh2ke5ta" path="res://Assets/Crunchycons/Icons/CrossTransparent_20220327174035.png" id="3_wc30j"]
+[ext_resource type="Texture2D" uid="uid://b83h4b0jburvx" path="res://Assets/Crunchycons/Icons/CrossBlack_20220327174043.png" id="4_ljh24"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5nt7"]
+texture = ExtResource("2_quw6l")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mfitl"]
+texture = ExtResource("3_wc30j")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22ekr"]
+texture = ExtResource("4_ljh24")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+
+[sub_resource type="Theme" id="Theme_4rki6"]
+Button/styles/hover = SubResource("StyleBoxTexture_k5nt7")
+Button/styles/normal = SubResource("StyleBoxTexture_mfitl")
+Button/styles/pressed = SubResource("StyleBoxTexture_22ekr")
+
+[node name="Felicidades" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_povob")
+script = ExtResource("2_gx10e")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -112.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 104.0
+grow_horizontal = 0
+theme = SubResource("Theme_4rki6")
+
+[node name="Label" type="Label" parent="ItemList"]
+layout_mode = 2
+offset_top = 165.0
+offset_right = 1280.0
+offset_bottom = 554.0
+text = "Felicidades!
+Haz completado todos los
+módulos. Ya estás listo/a para 
+dar el taller!"
+horizontal_alignment = 1

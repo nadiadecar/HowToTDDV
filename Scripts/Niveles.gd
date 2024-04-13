@@ -8,8 +8,44 @@ extends ItemList
 @onready var hito_3 = %Hito3
 @onready var volver = %Volver
 @onready var notas_devlogs = %NotasDevlogs
+@onready var felicidades = $Felicidades
+
+var niveles_completados = 0
 
 func _ready():
+	
+	felicidades.cerrar_felicidades.connect(_conectar_senales)
+	var niveles_estados = Game.get_niveles_completados()
+	
+	if niveles_estados["Devlog1"]: 
+		niveles_completados += 1
+		devlog_1.text += " ★"
+	if niveles_estados["DevlogNormal"]: 
+		niveles_completados += 1
+		devlog_normal.text += " ★"
+	if niveles_estados["DevlogHito"]: 
+		niveles_completados += 1
+		devlog_hito.text += " ★"
+	if niveles_estados["Hito1"]: 
+		niveles_completados += 1
+		hito_1.text += " ★"
+	if niveles_estados["Hito2"]: 
+		niveles_completados += 1
+		hito_2.text += " ★"
+	if niveles_estados["Hito3"]: 
+		niveles_completados += 1
+		hito_3.text += " ★"
+	if niveles_estados["NotasDevlog"]: 
+		niveles_completados += 1
+		notas_devlogs.text += " ★"
+		
+	if niveles_completados == 7: 
+		felicidades.visible = true
+	else: 
+		_conectar_senales()
+
+func _conectar_senales():
+	felicidades.visible = false
 	devlog_1.pressed.connect(_on_devlog_1_pressed)
 	devlog_normal.pressed.connect(_on_devlog_normal_pressed)
 	devlog_hito.pressed.connect(_on_devlog_hito_pressed)
@@ -18,24 +54,6 @@ func _ready():
 	hito_3.pressed.connect(_on_hito_3_pressed)
 	notas_devlogs.pressed.connect(_on_notas_devlogs_pressed)
 	volver.pressed.connect(_on_volver_pressed)
-	
-	var niveles_estados = Game.get_niveles_completados()
-	
-	if niveles_estados["Devlog1"]: 
-		devlog_1.text += " ★"
-	if niveles_estados["DevlogNormal"]: 
-		devlog_normal.text += " ★"
-	if niveles_estados["DevlogHito"]: 
-		devlog_hito.text += " ★"
-	if niveles_estados["Hito1"]: 
-		hito_1.text += " ★"
-	if niveles_estados["Hito2"]: 
-		hito_2.text += " ★"
-	if niveles_estados["Hito3"]: 
-		hito_3.text += " ★"
-	if niveles_estados["NotasDevlog"]: 
-		notas_devlogs.text += " ★"
-
 
 func _on_devlog_1_pressed(): 
 	get_tree().change_scene_to_file("res://Escenas/Devlogs/Devlog1/Devlog1.tscn")

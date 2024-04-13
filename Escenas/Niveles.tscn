@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://daxa4lq3laqhh"]
+[gd_scene load_steps=11 format=3 uid="uid://daxa4lq3laqhh"]
 
 [ext_resource type="Theme" uid="uid://bqehwwm3pykby" path="res://Assets/menutheme.tres" id="1_ovbkj"]
 [ext_resource type="Script" path="res://Scripts/Niveles.gd" id="2_kaw3a"]
 [ext_resource type="Texture2D" uid="uid://h0tduu7lxv0b" path="res://Assets/Crunchycons/Icons/ArrowRightBlack_20220327174209.png" id="3_1wbyw"]
+[ext_resource type="PackedScene" uid="uid://b6hq8840mjyn3" path="res://Escenas/Felicidades.tscn" id="3_6cg4n"]
 [ext_resource type="Texture2D" uid="uid://b2pqul3vtawhm" path="res://Assets/Crunchycons/Icons/ArrowRightTransparent_20220327174205.png" id="4_ge8ti"]
 [ext_resource type="Texture2D" uid="uid://bjmeagxedebts" path="res://Assets/Crunchycons/Icons/ArrowRight_20220327174215.png" id="5_mi6yy"]
 
@@ -151,6 +152,18 @@ offset_bottom = 277.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "Hito 3"
+
+[node name="Felicidades" parent="ItemList" instance=ExtResource("3_6cg4n")]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 240.0
+offset_top = 128.0
+offset_right = 1520.0
+offset_bottom = 848.0
+scale = Vector2(0.625463, 0.632086)
 
 [node name="Volver" type="Button" parent="."]
 unique_name_in_owner = true
