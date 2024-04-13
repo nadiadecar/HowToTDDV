@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5r4ljia8f8e7"]
+[gd_scene load_steps=7 format=3 uid="uid://c5r4ljia8f8e7"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_3guag"]
 [ext_resource type="Theme" uid="uid://bqehwwm3pykby" path="res://Assets/menutheme.tres" id="1_8my1q"]
 [ext_resource type="Texture2D" uid="uid://b80emlyidgw5c" path="res://Assets/Black.png" id="3_2d57h"]
 [ext_resource type="Texture2D" uid="uid://basimdrksq2sa" path="res://Assets/IMG_0379.PNG" id="4_ni1de"]
+
+[sub_resource type="Theme" id="Theme_6kied"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_aadnk"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 16
 
 [node name="MainMenu" type="MarginContainer"]
 anchors_preset = 15
@@ -18,7 +25,7 @@ theme = ExtResource("1_8my1q")
 script = ExtResource("1_3guag")
 
 [node name="Black" type="Sprite2D" parent="BaseMenu"]
-position = Vector2(640, 205)
+position = Vector2(640, 198)
 scale = Vector2(1, 0.943936)
 texture = ExtResource("3_2d57h")
 
@@ -50,9 +57,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -158.5
-offset_top = 39.0
+offset_top = 56.0
 offset_right = 158.5
-offset_bottom = 133.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_8my1q")
@@ -67,9 +74,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -159.0
-offset_top = 142.0
+offset_top = 205.0
 offset_right = 162.0
-offset_bottom = 236.0
+offset_bottom = 299.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_8my1q")
@@ -78,6 +85,7 @@ text = "Créditos
 
 [node name="Salir" type="Button" parent="BaseMenu"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -94,7 +102,34 @@ theme = ExtResource("1_8my1q")
 text = "Salir
 "
 
+[node name="Label" type="Label" parent="BaseMenu"]
+visible = false
+layout_mode = 0
+offset_left = 231.0
+offset_top = 500.0
+offset_right = 571.0
+offset_bottom = 595.0
+theme = SubResource("Theme_6kied")
+text = "By Nadia"
+
+[node name="Label2" type="Label" parent="BaseMenu"]
+visible = false
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 525.0
+offset_right = 1383.0
+offset_bottom = 718.0
+theme = SubResource("Theme_aadnk")
+text = "This is 
+not Nadia"
+
 [node name="Img0379" type="Sprite2D" parent="."]
 position = Vector2(1033, 564)
 scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_ni1de")
+
+[node name="Img0380" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(906.104, 513.6)
+scale = Vector2(1.05649, 1.05649)
 texture = ExtResource("4_ni1de")
