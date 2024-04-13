@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1qjypcle858h"]
+
+[ext_resource type="Script" path="res://Scripts/Hito3/Hito3_4.gd" id="1_jdbhp"]
+[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_rue8o"]
+[ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="3_nueg7"]
+
+[sub_resource type="Theme" id="Theme_ykj8p"]
+Label/font_sizes/font_size = 80
+Label/fonts/font = ExtResource("3_nueg7")
+
+[node name="Hito3_4" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jdbhp")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+theme = ExtResource("2_rue8o")
+
+[node name="Label" type="Label" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -391.5
+offset_top = 59.0
+offset_right = 391.5
+offset_bottom = 154.0
+grow_horizontal = 2
+theme = SubResource("Theme_ykj8p")
+text = "¿Se deben poner a ustedes en los
+créditos?"
+horizontal_alignment = 1
+
+[node name="incorrecto2" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = 112.0
+offset_right = 475.0
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "No, no hay que tener creditos"
+
+[node name="correcto" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = 12.0
+offset_right = 475.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Si, y a los externos también"
+
+[node name="incorrecto1" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = -88.0
+offset_right = 475.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Si, solo a nosotros"
+
+[node name="incorrecto3" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -425.0
+offset_top = 212.0
+offset_right = 475.0
+offset_bottom = 306.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "No, solo los externos"

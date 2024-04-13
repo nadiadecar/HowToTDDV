@@ -1,0 +1,198 @@
+[gd_scene load_steps=14 format=3 uid="uid://p6iw6xl5nl45"]
+
+[ext_resource type="Script" path="res://Scripts/Hito3/Hito3_2.gd" id="1_r06xf"]
+[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_ihyl4"]
+[ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="3_fwttj"]
+[ext_resource type="Theme" uid="uid://cy2ecrfxy0ckm" path="res://Assets/checkTheme.tres" id="4_v5lc7"]
+[ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="5_omw8h"]
+[ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="6_bcxsy"]
+[ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="7_er514"]
+
+[sub_resource type="Theme" id="Theme_ykj8p"]
+Label/font_sizes/font_size = 80
+Label/fonts/font = ExtResource("3_fwttj")
+
+[sub_resource type="Theme" id="Theme_juuyf"]
+RichTextLabel/font_sizes/normal_font_size = 40
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3gst"]
+texture = ExtResource("5_omw8h")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3m8mr"]
+texture = ExtResource("6_bcxsy")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rgii"]
+texture = ExtResource("7_er514")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_nvvw5"]
+Button/styles/hover = SubResource("StyleBoxTexture_l3gst")
+Button/styles/normal = SubResource("StyleBoxTexture_3m8mr")
+Button/styles/pressed = SubResource("StyleBoxTexture_1rgii")
+
+[node name="Hito3_2" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r06xf")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+theme = ExtResource("2_ihyl4")
+
+[node name="Label" type="Label" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -521.0
+offset_top = 20.0
+offset_right = 521.0
+offset_bottom = 193.0
+grow_horizontal = 2
+theme = SubResource("Theme_ykj8p")
+text = "¿Qué aspectos nuevos se piden
+en el hito 3?"
+horizontal_alignment = 1
+
+[node name="correcto5" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 239.0
+offset_right = 351.0
+offset_bottom = 299.0
+theme = ExtResource("4_v5lc7")
+toggle_mode = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/correcto5"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 7.0
+offset_right = 618.0
+offset_bottom = 69.0
+theme = SubResource("Theme_juuyf")
+text = "Historia implementada"
+
+[node name="incorrecto" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 309.0
+offset_right = 351.0
+offset_bottom = 369.0
+theme = ExtResource("4_v5lc7")
+toggle_mode = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/incorrecto"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 7.0
+offset_right = 847.0
+offset_bottom = 69.0
+theme = SubResource("Theme_juuyf")
+text = "5 niveles desarrollados completamente"
+
+[node name="correcto4" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 449.0
+offset_right = 351.0
+offset_bottom = 509.0
+theme = ExtResource("4_v5lc7")
+toggle_mode = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/correcto4"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 7.0
+offset_right = 847.0
+offset_bottom = 69.0
+theme = SubResource("Theme_juuyf")
+text = "Sprites finales"
+
+[node name="correcto3" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 589.0
+offset_right = 351.0
+offset_bottom = 649.0
+theme = ExtResource("4_v5lc7")
+toggle_mode = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/correcto3"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 7.0
+offset_right = 847.0
+offset_bottom = 69.0
+theme = SubResource("Theme_juuyf")
+text = "Pantalla de créditos"
+
+[node name="correcto" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 379.0
+offset_right = 351.0
+offset_bottom = 439.0
+theme = ExtResource("4_v5lc7")
+toggle_mode = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/correcto"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 7.0
+offset_right = 847.0
+offset_bottom = 69.0
+theme = SubResource("Theme_juuyf")
+text = "How to play / Tutorial"
+
+[node name="correcto2" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 519.0
+offset_right = 351.0
+offset_bottom = 579.0
+theme = ExtResource("4_v5lc7")
+toggle_mode = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList/correcto2"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 7.0
+offset_right = 847.0
+offset_bottom = 69.0
+theme = SubResource("Theme_juuyf")
+text = "Juego cumpla con lo prometido"
+
+[node name="Siguiente" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 648.0
+offset_right = 1267.0
+offset_bottom = 711.0
+theme = SubResource("Theme_nvvw5")
+
+[node name="Volver" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 113.0
+offset_top = -13.0
+offset_right = 212.0
+offset_bottom = 50.0
+grow_vertical = 0
+rotation = 3.14159
+theme = SubResource("Theme_nvvw5")
