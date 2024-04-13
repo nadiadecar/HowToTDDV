@@ -1,24 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://fl2w2n4um5wg"]
+[gd_scene load_steps=5 format=3 uid="uid://u1epv6grj51l"]
 
-[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="1_1n0ok"]
-[ext_resource type="Script" path="res://Scripts/Devlog1/Devlog1_2.gd" id="1_jto0d"]
-[ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="2_5fh5w"]
+[ext_resource type="Script" path="res://Scripts/DevlogHitos/DevlogHitos_2.gd" id="1_7l63f"]
+[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_e2535"]
+[ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="3_w8di5"]
 
 [sub_resource type="Theme" id="Theme_ykj8p"]
-Label/font_sizes/font_size = 80
-Label/fonts/font = ExtResource("2_5fh5w")
+Label/font_sizes/font_size = 90
+Label/fonts/font = ExtResource("3_w8di5")
 
-[node name="Devlog1_2" type="MarginContainer"]
+[node name="DevlogHitos_2" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jto0d")
+script = ExtResource("1_7l63f")
 
 [node name="ItemList" type="ItemList" parent="."]
 layout_mode = 2
-theme = ExtResource("1_1n0ok")
+theme = ExtResource("2_e2535")
 
 [node name="Label" type="Label" parent="ItemList"]
 layout_mode = 1
@@ -31,7 +31,7 @@ offset_right = 391.5
 offset_bottom = 154.0
 grow_horizontal = 2
 theme = SubResource("Theme_ykj8p")
-text = "¿Dónde hay que publicar los devlogs?"
+text = "¿Los devlog de hito llevan nota?"
 
 [node name="incorrecto1" type="Button" parent="ItemList"]
 layout_mode = 1
@@ -46,24 +46,9 @@ offset_right = 360.0
 offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Novedades de U-cursos"
+text = "Si, vale el 70% del curso"
 
 [node name="incorrecto2" type="Button" parent="ItemList"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -360.0
-offset_top = -51.0
-offset_right = 360.0
-offset_bottom = 43.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Por telegram"
-
-[node name="correcto" type="Button" parent="ItemList"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -76,7 +61,22 @@ offset_right = 360.0
 offset_bottom = 143.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "itch.io"
+text = "¿Qué son las notas?"
+
+[node name="correcto" type="Button" parent="ItemList"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -51.0
+offset_right = 360.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "No"
 
 [node name="incorrecto3" type="Button" parent="ItemList"]
 layout_mode = 1
@@ -91,4 +91,4 @@ offset_right = 360.0
 offset_bottom = 243.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Por el foro de U-cursos"
+text = "Si, igual que el resto"

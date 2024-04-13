@@ -6,7 +6,8 @@ var niveles_completados = {
 	"DevlogHito":false,
 	"Hito1":false,
 	"Hito2":false,
-	"Hito3":false
+	"Hito3":false,
+	"NotasDevlog": false
 }
 
 func save_level(nivel):
