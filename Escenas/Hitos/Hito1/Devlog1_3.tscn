@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://dqsvl2vogw0na"]
+
+[ext_resource type="Script" path="res://Scripts/Devlog1/Devlog1_3.gd" id="1_jfmk7"]
+[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_0r8h1"]
+[ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="3_ptlmr"]
+[ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="4_dm1ej"]
+[ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="5_mwnvb"]
+[ext_resource type="Texture2D" uid="uid://bmtp3jtvuh5r2" path="res://Assets/IMG_0380.PNG" id="6_kiicu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3gst"]
+texture = ExtResource("3_ptlmr")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3m8mr"]
+texture = ExtResource("4_dm1ej")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rgii"]
+texture = ExtResource("5_mwnvb")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_n6ajg"]
+Button/styles/hover = SubResource("StyleBoxTexture_l3gst")
+Button/styles/normal = SubResource("StyleBoxTexture_3m8mr")
+Button/styles/pressed = SubResource("StyleBoxTexture_1rgii")
+
+[node name="Devlog1_3" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jfmk7")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+theme = ExtResource("2_0r8h1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 157.0
+offset_right = 1240.0
+offset_bottom = 396.0
+text = "Por ser el primero se les pide algo distinto al resto, se les va a pedir algo distinto. 
+
+Lo que buscamos en este caso es que se presenten como grupo, cuenten quieres son y que van a hacer, contar la idea del juego que tienen (tiene que ir en el devlog, no en el proyecto), hablar de como planean desarrollar la idea, y agregar una imagen que permita visualizar algo de lo que hablaron o que tenga relación con el juego."
+
+[node name="Label" type="Label" parent="ItemList"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 36.0
+offset_right = 803.0
+offset_bottom = 131.0
+text = "Primer Devlog
+"
+
+[node name="Siguiente" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 648.0
+offset_right = 1267.0
+offset_bottom = 711.0
+theme = SubResource("Theme_n6ajg")
+
+[node name="Img0380" type="Sprite2D" parent="."]
+position = Vector2(574, 544)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("6_kiicu")

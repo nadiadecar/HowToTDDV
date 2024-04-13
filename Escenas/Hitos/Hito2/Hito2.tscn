@@ -1,9 +1,77 @@
-[gd_scene format=3 uid="uid://dh3f4ij3v4pdt"]
+[gd_scene load_steps=11 format=3 uid="uid://nk4x5xf4b1n1"]
 
-[node name="Hito2" type="Control"]
-layout_mode = 3
+[ext_resource type="Script" path="res://Scripts/Hito2/Hito2.gd" id="1_rhxnn"]
+[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_0g1go"]
+[ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="3_iocdw"]
+[ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="4_rm8jk"]
+[ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="5_nb7xr"]
+[ext_resource type="Texture2D" uid="uid://bmtp3jtvuh5r2" path="res://Assets/IMG_0380.PNG" id="6_fop1h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
+texture = ExtResource("3_iocdw")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg6s1"]
+texture = ExtResource("4_rm8jk")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmn6q"]
+texture = ExtResource("5_nb7xr")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_n6ajg"]
+Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
+Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
+Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
+
+[node name="Hito2" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rhxnn")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+theme = ExtResource("2_0g1go")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 157.0
+offset_right = 1240.0
+offset_bottom = 396.0
+text = "Para este hito ya deben tener la mecánica innovadoa implementada completamente. Da lo mismo si son dos cajas con el logo de godot, mientras podamos ver implementada la mecánica y que el juego cumpla con lo que nos prometieron en el primer hit, esta bien. 
+
+Lo importante es que ya se pueda apreciar la mecánica y el genero, no necesariamente la historia, los colores o los personajes. "
+
+[node name="Label" type="Label" parent="ItemList"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 36.0
+offset_right = 803.0
+offset_bottom = 131.0
+text = "Hito 2
+"
+
+[node name="Siguiente" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 648.0
+offset_right = 1267.0
+offset_bottom = 711.0
+theme = SubResource("Theme_n6ajg")
+
+[node name="Img0380" type="Sprite2D" parent="."]
+position = Vector2(869, 526)
+texture = ExtResource("6_fop1h")
