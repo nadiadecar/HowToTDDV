@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://cmyd81p08cdv"]
+
+[ext_resource type="Script" path="res://Scripts/NotasDevlogs/NotasDevlogs_2.gd" id="1_svavk"]
+[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="1_tbqua"]
+[ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="2_nsejj"]
+[ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="3_gpnyk"]
+[ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="4_2py8g"]
+[ext_resource type="Texture2D" uid="uid://bmtp3jtvuh5r2" path="res://Assets/IMG_0380.PNG" id="5_qik2h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
+texture = ExtResource("2_nsejj")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg6s1"]
+texture = ExtResource("3_gpnyk")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmn6q"]
+texture = ExtResource("4_2py8g")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_wwk7c"]
+Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
+Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
+Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
+
+[node name="DevlogNormal" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_svavk")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+theme = ExtResource("1_tbqua")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 254.0
+offset_right = 1240.0
+offset_bottom = 616.0
+text = "Considerando que este es un taller que busca que aprendan a diseñar y programar un videojuego, el usuario pasa a ser uno de los puntos más importantes. Lo que sus devlogs deben buscar es que los potenciales jugadores se involucren en el desarrollo de su proyecto, que quieran eventualmente ser parte de la experiencia y jugar el juego, o interactuar con
+los posts para dar sus opiniones respecto al desarrollo y las decisiones que se están tomando. Por lo anterior, si nos entregan un devlog en el 
+que se hace solo un punteo de 2 palabras sobre lo que
+hicieron y van a hacer, no se considerará que sea una 
+buena entrega. "
+
+[node name="Label" type="Label" parent="ItemList"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 36.0
+offset_right = 803.0
+offset_bottom = 131.0
+text = "¿Qué es que sea de buena 
+calidad?"
+
+[node name="Siguiente" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 648.0
+offset_right = 1267.0
+offset_bottom = 711.0
+theme = SubResource("Theme_wwk7c")
+
+[node name="Img0380" type="Sprite2D" parent="."]
+position = Vector2(889, 564)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_qik2h")

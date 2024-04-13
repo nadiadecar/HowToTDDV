@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpovkecv0ekgo"]
+[gd_scene load_steps=11 format=3 uid="uid://dpovkecv0ekgo"]
 
 [ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="1_5dw2y"]
+[ext_resource type="Script" path="res://Scripts/NotasDevlogs/NotasDevlogs.gd" id="1_ba6oj"]
 [ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="2_eod5f"]
 [ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="3_2uunu"]
 [ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="4_hqd41"]
@@ -32,12 +33,13 @@ Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
 Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
 Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
 
-[node name="DevlogNormal" type="MarginContainer"]
+[node name="NotasDevlogs" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ba6oj")
 
 [node name="ItemList" type="ItemList" parent="."]
 layout_mode = 2
@@ -49,13 +51,12 @@ offset_left = 73.0
 offset_top = 157.0
 offset_right = 1240.0
 offset_bottom = 519.0
-text = "El formato de presentación qued a su disposición y el contenido también, pero como mínimo se les pedirá lo siguiente: 
+scale = Vector2(0.994271, 0.991714)
+text = "Los devlogs se van a evaluar con una escala de 3 notas posibles: 
 
-	- Introducción (contexto/reflexión de lo que llevan)
-	- Hablar de lo que hicieron desde el último devlog
-	- Hablar de lo que están haciendo 
-	- Tener imágenes de lo que están mencionando 
-	- Build si es que aplica "
+	- 1.0 : Implica que su devlog no cumple con lo mínimo pedido 
+	- 4.0 : Cumple con la mayoría, pero le falta algunos puntos o no es de buena calidad
+	- 7.0 : Comple con todo lo pedido y es de buena calidad"
 
 [node name="Label" type="Label" parent="ItemList"]
 layout_mode = 0
@@ -63,7 +64,7 @@ offset_left = 67.0
 offset_top = 36.0
 offset_right = 803.0
 offset_bottom = 131.0
-text = "Devlog Normal"
+text = "Notas Devlog"
 
 [node name="Siguiente" type="Button" parent="ItemList"]
 layout_mode = 0
