@@ -47,13 +47,13 @@ func _on_devlog_hito_pressed():
 	get_tree().change_scene_to_file("res://Escenas/Devlogs/DevlogHitos/DevlogHitos.tscn")
 
 func _on_hito_1_pressed(): 
-	get_tree().change_scene_to_file("res://Escenas/Hitos/Hito1.tscn")
+	get_tree().change_scene_to_file("res://Escenas/Hitos/Hito1/Hito1.tscn")
 
 func _on_hito_2_pressed(): 
-	get_tree().change_scene_to_file("res://Escenas/Hitos/Hito2.tscn")
+	get_tree().change_scene_to_file("res://Escenas/Hitos/Hito2/Hito2.tscn")
 
 func _on_hito_3_pressed(): 
-	get_tree().change_scene_to_file("res://Escenas/Hitos/Hito3.tscn")
+	get_tree().change_scene_to_file("res://Escenas/Hitos/Hito3/Hito3.tscn")
 
 func _on_volver_pressed(): 
 	get_tree().change_scene_to_file("res://Escenas/main_menu.tscn")

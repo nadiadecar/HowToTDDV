@@ -1,0 +1,108 @@
+[gd_scene load_steps=13 format=3 uid="uid://d2ucupt1dcc8n"]
+
+[ext_resource type="Script" path="res://Scripts/Hito1/Hito1.gd" id="1_iupvo"]
+[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="2_v6q5t"]
+[ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="3_jqqaj"]
+[ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="4_aojox"]
+[ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="5_7ml1l"]
+[ext_resource type="Texture2D" uid="uid://bmtp3jtvuh5r2" path="res://Assets/IMG_0380.PNG" id="6_xgy7g"]
+[ext_resource type="Texture2D" uid="uid://385scm2mv3yo" path="res://Assets/EjemploBuild.png" id="7_rvmn3"]
+
+[sub_resource type="Theme" id="Theme_aojek"]
+Label/font_sizes/font_size = 30
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
+texture = ExtResource("3_jqqaj")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg6s1"]
+texture = ExtResource("4_aojox")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmn6q"]
+texture = ExtResource("5_7ml1l")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_n6ajg"]
+Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
+Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
+Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
+
+[node name="Hito1" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iupvo")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+theme = ExtResource("2_v6q5t")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 157.0
+offset_right = 1240.0
+offset_bottom = 396.0
+text = "Como pueden ver en el calendario, hay 3 hitos a lo largo del curso. Para cada hito se les va a pedir que suban la versión a presentar en itch.io hasta el día anterior a su presentación, pues lo que se va a mostrar (en cuanto al juego) va a ser lo que haya ahí."
+
+[node name="LinkButton" type="LinkButton" parent="ItemList/RichTextLabel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507
+anchor_top = 0.272
+anchor_right = 0.579
+anchor_bottom = 0.41
+offset_left = -65.669
+offset_top = -33.008
+offset_right = -39.925
+offset_bottom = -32.99
+theme = ExtResource("2_v6q5t")
+text = "itch.io"
+underline = 1
+uri = "https://itch.io"
+
+[node name="Label" type="Label" parent="ItemList"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 36.0
+offset_right = 803.0
+offset_bottom = 131.0
+text = "Contexto
+"
+
+[node name="Label" type="Label" parent="ItemList/Label"]
+offset_left = 645.0
+offset_top = 341.0
+offset_right = 1381.0
+offset_bottom = 436.0
+theme = SubResource("Theme_aojek")
+text = "Ejemplo:"
+
+[node name="Siguiente" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 648.0
+offset_right = 1267.0
+offset_bottom = 711.0
+theme = SubResource("Theme_n6ajg")
+
+[node name="Img0380" type="Sprite2D" parent="."]
+position = Vector2(356, 526)
+texture = ExtResource("6_xgy7g")
+
+[node name="EjemploBuild" type="Sprite2D" parent="."]
+position = Vector2(969, 483)
+scale = Vector2(0.854167, 0.854167)
+texture = ExtResource("7_rvmn3")
