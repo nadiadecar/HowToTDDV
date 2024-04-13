@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=3 uid="uid://dv4jvbxnksh67"]
+
+[ext_resource type="Script" path="res://Scripts/Devlog1/Devlog1.gd" id="1_ccoy4"]
+[ext_resource type="Theme" uid="uid://b4gvvxv8ucw2g" path="res://Assets/paginastheme.tres" id="1_fse8g"]
+[ext_resource type="Texture2D" uid="uid://cnelvb78mdktk" path="res://Assets/Crunchycons/Icons/ArrowLeft_20220327174131.png" id="2_fuid3"]
+[ext_resource type="Texture2D" uid="uid://ckkg2wb3wx2u6" path="res://Assets/Crunchycons/Icons/ArrowLeftTransparent_20220327174122.png" id="3_ujisc"]
+[ext_resource type="Texture2D" uid="uid://4mhvxv2usi6u" path="res://Assets/Crunchycons/Icons/ArrowLeftBlack_20220327174126.png" id="4_p886x"]
+[ext_resource type="Texture2D" uid="uid://dfsscvvi3v33y" path="res://Assets/CrearProyecto.png" id="5_6lhch"]
+[ext_resource type="Texture2D" uid="uid://8i6i6dgs5j76" path="res://Assets/Devlogs.png" id="6_0im4i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujbjn"]
+texture = ExtResource("2_fuid3")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg6s1"]
+texture = ExtResource("3_ujisc")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmn6q"]
+texture = ExtResource("4_p886x")
+texture_margin_top = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_n6ajg"]
+Button/styles/hover = SubResource("StyleBoxTexture_ujbjn")
+Button/styles/normal = SubResource("StyleBoxTexture_vg6s1")
+Button/styles/pressed = SubResource("StyleBoxTexture_tmn6q")
+
+[node name="Devlog1" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ccoy4")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 2
+theme = ExtResource("1_fse8g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ItemList"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 157.0
+offset_right = 1240.0
+offset_bottom = 396.0
+text = "Devlog es corto para Developer Log. 
+
+Los devlog serán publicados en la plataforma itch.io, donde deberán hacer un proyecto para sus juegos y aproximadamente cada dos semanas tendrán que ir agregando información sobre sus avances y el estado del proyecto."
+
+[node name="LinkButton" type="LinkButton" parent="ItemList/RichTextLabel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507
+anchor_top = 0.272
+anchor_right = 0.579
+anchor_bottom = 0.41
+offset_left = -18.669
+offset_top = -0.00800323
+offset_right = 7.07501
+offset_bottom = 0.00999451
+theme = ExtResource("1_fse8g")
+text = "itch.io"
+underline = 1
+uri = "https://itch.io"
+
+[node name="Label" type="Label" parent="ItemList"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 36.0
+offset_right = 803.0
+offset_bottom = 131.0
+text = "Contexto
+"
+
+[node name="Siguiente" type="Button" parent="ItemList"]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 648.0
+offset_right = 1267.0
+offset_bottom = 711.0
+theme = SubResource("Theme_n6ajg")
+
+[node name="CrearProyecto" type="Sprite2D" parent="."]
+position = Vector2(189, 510)
+scale = Vector2(0.702273, 0.702273)
+texture = ExtResource("5_6lhch")
+
+[node name="Devlogs" type="Sprite2D" parent="."]
+position = Vector2(701, 515)
+scale = Vector2(0.641327, 0.642727)
+texture = ExtResource("6_0im4i")
+
+[node name="ArrowLeftBlack20220327174126" type="Sprite2D" parent="."]
+position = Vector2(334, 471)
+scale = Vector2(0.527344, 0.257813)
+texture = ExtResource("4_p886x")

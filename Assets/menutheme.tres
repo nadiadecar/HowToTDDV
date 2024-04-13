@@ -1,0 +1,62 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bqehwwm3pykby"]
+
+[ext_resource type="FontFile" uid="uid://i4ckcgrvy0fy" path="res://Assets/Kurland_Font_0_33/Kurland.ttf" id="1_hw2br"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdmge"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1cbu"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_awios"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb0g5"]
+bg_color = Color(0.988235, 0.952941, 0.0392157, 1)
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.988235, 0.952941, 0.0392157, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 70
+Button/fonts/font = ExtResource("1_hw2br")
+Button/styles/hover = SubResource("StyleBoxFlat_pdmge")
+Button/styles/normal = SubResource("StyleBoxFlat_s1cbu")
+Button/styles/pressed = SubResource("StyleBoxFlat_awios")
+ItemList/styles/panel = SubResource("StyleBoxFlat_yb0g5")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 90
+Label/fonts/font = ExtResource("1_hw2br")
